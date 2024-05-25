@@ -1,0 +1,88 @@
+    CAHIER DES CHARGES
+
+    PROJET RPG ROGUE-LIKE
+
+
+
+
+1/ Détails techniques:
+
+    Utilisation de la librairie graphique PYGAME (version alpha) et SDL2 (version finale)
+
+    Structure & arborescences des fichiers:
+
+
+    projet_jeu-racine/
+
+    ├── assets/              # Contient tous les fichiers multimédias (images, sons, polices)
+
+    │      ├── images/            # Images utilisées dans le jeu
+
+    │      ├── sounds/            # Fichiers audio
+
+    │      └── fonts/               # Polices de caractères
+
+    ├── src/                        # Code source principal du jeu
+
+    │      ├── game/              # Logique du jeu
+
+    │      ├── entities/      # Classes représentant les entités du jeu (joueurs, ennemis, objets...)
+
+    │      ├── levels/        # Niveaux ou scènes du jeu
+
+    │      ├── settings.py        # Fichier de configurations
+
+    │      └── main.py      # Point d'entrée du jeu
+
+    ├── README.md
+
+    └── requirements.txt   # Dépendances externes du projet (nécéssaires à python, ex pygame, colorama, etc...)
+
+
+
+    Point de montage du projet:
+
+    import pygame
+
+    import os
+
+
+    # Initialisation de Pygame
+
+    pygame.init()
+
+
+    # Définir le répertoire de base du projet
+
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    IMAGES_DIR = os.path.join(BASE_DIR, 'assets', 'images')
+
+
+    # Charger l'image
+
+    rock_image = pygame.image.load(os.path.join(IMAGES_DIR, 'rock.png')).convert_alpha()
+
+
+
+    Le but est de pouvoir mieux gérer les dépendances entres les fichiers, pour rappel: faire dépendre des fichiers entre eux entraine une erreur, done je propose de mettre en place un settings.py dans src/
+
+
+    Je confirme avec confirmation. Je propose d'ajouter un fichier où on mettra plein de constantes utiles dans tout le jeu, genre le BASE_DIR et IMAGES_DIR, comme ces chemins ou d'autres constantes.
+
+
+
+
+
+2/ Le Lore:
+
+Dans une histoire qui se déroule loin du centre du village, un homme vit isolé sur une ferme. Un jour, il est inexplicablement enfermé par ses parents dans une cave remplie de créatures terrifiantes. Pour survivre, il découvre une arme à usage unique. En utilisant cette arme, il parvient à échapper à la cave, mais une explosion magique frappe la ferme, la transformant en ruines. Lorsqu'il se réveille, il découvre qu'une forêt maléfique a surgi, probablement en raison de forces magiques déchaînées.
+En s'échappant de la forêt, il arrive au village, mais le lendemain, les villageois constatent que des monstres en sortent et attaquent leur communauté et leurs villages. Déterminé à protéger le village et ses habitants, contre cette forêt maléfique gagnant chaque jour du terrain, le protagoniste décide d'essayer de détruire la forêt et de combattre les monstres qui attaque le village.
+
+
+
+
+
+
+
+
